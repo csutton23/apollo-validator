@@ -49,14 +49,7 @@ async function verify(row, h) {
       tools: [{ type: "web_search_20250305", name: "web_search" }],
       messages: [{
         role: "user",
-        content: `Verify this business record by searching the web. Return ONLY raw JSON with no markdown fences.
-
-Company: ${co}
-Apollo owner: ${fn} ${ln}
-Apollo address: ${addr}, ${city}, ${state} ${zip}
-
-Find the real owner and address from the company website or public records. Return this exact JSON structure:
-{"verified_owner_first":"","verified_owner_last":"","verified_address":"","verified_city":"","verified_state":"","verified_zip":"","name_status":"MATCH or MISMATCH or PARTIAL or UNVERIFIED","address_status":"MATCH or MISMATCH or PARTIAL or UNVERIFIED","name_notes":"","address_notes":"","source":""}`
+        content: `Verify this business record by searching the web. Return ONLY raw JSON with no markdown fences.\n\nCompany: ${co}\nApollo owner: ${fn} ${ln}\nApollo address: ${addr}, ${city}, ${state} ${zip}\n\nFind the real owner and address from the company website or public records. Return this exact JSON structure:\n{"verified_owner_first":"","verified_owner_last":"","verified_address":"","verified_city":"","verified_state":"","verified_zip":"","name_status":"MATCH or MISMATCH or PARTIAL or UNVERIFIED","address_status":"MATCH or MISMATCH or PARTIAL or UNVERIFIED","name_notes":"","address_notes":"","source":""}`
       }]
     })
   });
